@@ -1,0 +1,30 @@
+<!-- 기존 메뉴 출력
+{% if menu_list %}
+  <ul>
+    {% for menu in menu_list %}
+      <li>{{ menu }}</li>
+    {% endfor %}
+  </ul>
+{% endif %} -->
+
+
+
+{% if latest_update_time %}
+  <p><strong>최종 업데이트:</strong> {{ latest_update_time }}</p>
+{% endif %}
+
+
+<!-- 새로 추가된 시트 내용 출력 -->
+<h3> 구글 시트 내용</h3>
+{% for sheet_name, rows in sheet_data %}
+  <h4>{{ sheet_name }}</h4>
+  <table border="1">
+    {% for row in rows %}
+      <tr>
+        {% for cell in row %}
+          <td>{{ cell }}</td>
+        {% endfor %}
+      </tr>
+    {% endfor %}
+  </table>
+{% endfor %}

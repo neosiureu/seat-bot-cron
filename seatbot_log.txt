@@ -1,0 +1,96 @@
+[2025-05-19  1:33:54.95] SeatBot ?œìž‘ 
+â–¶ [1] Chrome ì˜µì…˜ ì„¤ì • ì¤‘...
+â–¶ [1] Chrome ì˜µì…˜ ì„¤ì • ì™„ë£Œ
+â–¶ [2] ChromeDriver ì‹¤í–‰ ì¤‘...
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/app/chatbot/library_seat.py", line 70, in <module>
+    main()
+  File "/app/chatbot/library_seat.py", line 24, in main
+    driver  = webdriver.Chrome(service=service, options=opts)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/selenium/webdriver/chrome/webdriver.py", line 45, in __init__
+    super().__init__(
+  File "/opt/venv/lib/python3.12/site-packages/selenium/webdriver/chromium/webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=options)
+  File "/opt/venv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 208, in __init__
+    self.start_session(capabilities)
+  File "/opt/venv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 292, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/selenium/webdriver/remote/webdriver.py", line 345, in execute
+    response = self.command_executor.execute(driver_command, params)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/selenium/webdriver/remote/remote_connection.py", line 302, in execute
+    return self._request(command_info[0], url, body=data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/selenium/webdriver/remote/remote_connection.py", line 322, in _request
+    response = self._conn.request(method, url, body=body, headers=headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/urllib3/_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/urllib3/_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/urllib3/poolmanager.py", line 443, in urlopen
+    response = conn.urlopen(method, u.request_uri, **kw)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/urllib3/connectionpool.py", line 534, in _make_request
+    response = conn.getresponse()
+               ^^^^^^^^^^^^^^^^^^
+  File "/opt/venv/lib/python3.12/site-packages/urllib3/connection.py", line 516, in getresponse
+    httplib_response = super().getresponse()
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 1428, in getresponse
+    response.begin()
+  File "/usr/lib/python3.12/http/client.py", line 331, in begin
+    version, status, reason = self._read_status()
+                              ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/http/client.py", line 292, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/socket.py", line 707, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+
+got 3 SIGTERM/SIGINTs, forcefully exiting
+[2025-05-19  1:36:36.92] SeatBot ì¢…ë£Œ 
+[2025-05-19  1:37:03.10] SeatBot ?œìž‘ 
+â–¶ [1] Chrome ì˜µì…˜ ì„¤ì • ì¤‘...
+â–¶ [1] Chrome ì˜µì…˜ ì„¤ì • ì™„ë£Œ
+â–¶ [2] ChromeDriver ì‹¤í–‰ ì¤‘...
+[2025-05-19  1:37:26.43] SeatBot ?œìž‘ 
+â–¶ [1] Chrome ì˜µì…˜ ì„¤ì • ì¤‘...
+â–¶ [1] Chrome ì˜µì…˜ ì„¤ì • ì™„ë£Œ
+â–¶ [2] ChromeDriver ì‹¤í–‰ ì¤‘...
+^C[2025-05-19  1:38:11.08] SeatBot ?œìž‘ 
+â–¶ [1] Chrome ì˜µì…˜ ì„¤ì • ì¤‘...
+â–¶ [1] Chrome ì˜µì…˜ ì„¤ì • ì™„ë£Œ
+â–¶ [2] ChromeDriver ì‹¤í–‰ ì¤‘...
+^C[2025-05-19  1:41:06.96] SeatBot ?œìž‘ 
+â–¶ [1] Chrome ì˜µì…˜ ì„¤ì • ì¤‘...
+â–¶ [1] Chrome ì˜µì…˜ ì„¤ì • ì™„ë£Œ
+â–¶ [2] ChromeDriver ì‹¤í–‰ ì¤‘...
+^C^C¢º [1] Chrome ¿É¼Ç ¼³Á¤ Áß...
+¢º [1] Chrome ¿É¼Ç ¼³Á¤ ¿Ï·á
+¢º [2] ChromeDriver ½ÇÇà Áß...
+¢º [2] ChromeDriver ½ÇÇà ¿Ï·á
+¢º [3] https://lib.dongguk.edu/ ¿äÃ» Áß...
+¢º [3] ÆäÀÌÁö ¿äÃ» ¿Ï·á
+¢º [4] ¿ä¼Ò(li.book) ·Îµå ´ë±â Áß...
+¢º [4] ¿ä¼Ò ·Îµå ¿Ï·á
+¢º [5] ÆäÀÌÁö ¼Ò½º ÆÄ½Ì Áß...
+¢º [5] ÆÄ½Ì ¿Ï·á
+¢º µå¶óÀÌ¹ö Á¾·á ¿Ï·á
+¢º [6] µ¥ÀÌÅÍ »ý¼º Áß...
+¢º [6] µ¥ÀÌÅÍ ÁØºñ ¿Ï·á: 7°³ Ç×¸ñ
+¢º [7] ±¸±Û ½ÃÆ® ¾÷µ¥ÀÌÆ® Áß...
+¢º [7] ±¸±Û ½ÃÆ® ¾÷µ¥ÀÌÆ® ¿Ï·á
+[2025-05-19 02:45:23] µµ¼­°ü ÁÂ¼® ÇöÈ² ¾÷µ¥ÀÌÆ® ¿Ï·á
+[2025-05-19  2:45:25.53] ì¢…ë£Œ(ExitCode=0) 
