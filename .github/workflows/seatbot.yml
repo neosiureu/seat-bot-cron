@@ -1,0 +1,27 @@
+name: SeatBot Cron Job
+
+on:
+  schedule:
+    - cron: '1 0 * * *'  # 매일 12:01 AM (UTC 기준)
+  workflow_dispatch:      # 수동 실행도 가능하게 함
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run script
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS_JSON: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
+        run: python -m chatbot.library_seat
