@@ -1,11 +1,25 @@
 # chatbot/read_google_sheet.py
+import os
+import json
+import tempfile
 from datetime import datetime
 from googleapiclient.discovery import build
 from google.oauth2 import service_account
 
-SERVICE_ACCOUNT_FILE = 'calm-axis-457509-u0-36793e7c962b.json'
- # Django 루트에 위치시킴
+# Google Credentials JSON을 환경변수로부터 읽기
+json_data = os.getenv("GOOGLE_APPLICATION_CREDENTIALS_JSON")
+if not json_data:
+    raise RuntimeError("환경변수 GOOGLE_APPLICATION_CREDENTIALS_JSON 이 설정되지 않았습니다.")
+
+# 임시 JSON 파일로 저장
+with tempfile.NamedTemporaryFile(mode="w+", delete=False, suffix=".json") as tmp:
+    tmp.write(json_data)
+    tmp_path = tmp.name
+
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets']
+
+# 이후 이 경로를 사용
+SERVICE_ACCOUNT_FILE = tmp_path
 # SPREADSHEET_ID = '1oEHz1980O2zAWlug19huO4HJASD-YMWQkIHqerqfgRE' # 졸업요건 모두 출력
 # SPREADSHEET_ID = '1Dbat_6AEVQwL2uCyWKIoS-lsGD6DYt5WO9wfsjxvOs8' # 전화번호 모두 출력
 # SPREADSHEET_ID = '1oEHz1980O2zAWlug19huO4HJASD-YMWQkIHqerqfgRE' # 과목상세설명 모두 출력
